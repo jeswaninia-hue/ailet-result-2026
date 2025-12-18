@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AILET 2026 Result (Demo)</title>
+  <style>
+    body{font-family:Arial;background:#f4f4f4}
+    .box{max-width:400px;margin:80px auto;background:#fff;
+    padding:25px;border-radius:8px;text-align:center}
+    button{background:#8b0000;color:#fff;border:none;
+    padding:10px 20px;border-radius:5px}
+    .hide{display:none}
+    img{width:100%;margin-top:15px}
+  </style>
+</head>
+<body>
+
+<div class="box" id="login">
+  <h2>AILET 2026 Result</h2>
+  <p>(Demo Portal)</p>
+  <input placeholder="User ID"><br><br>
+  <input placeholder="Password" type="password"><br><br>
+  <button onclick="next()">Login</button>
+</div>
+
+<div class="box hide" id="view">
+  <h2>Welcome Candidate</h2>
+  <button onclick="show()">View Result</button>
+</div>
+
+<div class="box hide" id="result">
+  <h2>Your Result</h2>
+  <img src="result.png">
+</div>
+
+<script>
+function next(){
+  login.classList.add("hide");
+  view.classList.remove("hide");
+}
+function show(){
+  view.classList.add("hide");
+  result.classList.remove("hide");
+}
+</script>
+
+</body>
+</html>
